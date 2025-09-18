@@ -2,15 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=à, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anecdote de tournage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <main>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <header class="bg-black p-4 border-b-4 border-purple-500">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-purple-400">🎭 Burton's Cinema</h1>
+            <nav class="flex space-x-8">
+                <a href="index.html" class="text-purple-400 underline">Accueil</a>
+                <a href="movies.html" class="text-gray-300 hover:text-purple-400">Films</a>
+                <a href="fun_facts.html" class="text-gray-300 hover:text-purple-400">Anecdotes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow p-6">
+        <div class="flex flex-col space-y-6">
+            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
+            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
+            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
+            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
+        </div>
     </main>
+
+    <footer class="bg-black p-6 border-t-4 border-purple-500">
+        <div class="flex justify-between items-center">
+            <div>
+                <h3 class="text-purple-400 text-lg">Allyson Lefebvre</h3>
+                <p class="text-gray-500 text-sm">© 2024 Burton's Cinema 🦇</p>
+            </div>
+        </div>
+    </footer>
 </body>
+</html>
 </html>
