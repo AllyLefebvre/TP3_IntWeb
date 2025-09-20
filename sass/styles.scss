@@ -92,7 +92,73 @@
         color: var(--burton-orange);
     }
     
+    &:focus {
+        outline: 2px solid var(--burton-orange);
+        outline-offset: 2px;
+        color: var(--burton-orange);
+    }
+    
     &.underline {
         color: var(--burton-orange);
+    }
+}
+
+.burton-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+main section p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.burton-card .text-xs {
+    font-size: 0.8rem !important;
+    line-height: 1.5;
+}
+
+.burton-quote p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+*:focus {
+    outline: 2px solid var(--burton-orange);
+    outline-offset: 2px;
+}
+
+.burton-card h3, .burton-card h4 {
+    color: var(--burton-bone);
+}
+
+a {
+    &:focus, &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 2px;
     }
 }

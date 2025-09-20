@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation des films</title>
+    <meta name="description" content="Découvrez la filmographie complète de Tim Burton : des débuts avec Beetlejuice aux dernières œuvres comme Wednesday, explorez l'univers gothique du maître du cinéma fantastique.">
+    <title>Films de Tim Burton - L'Univers de Burton</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
@@ -12,36 +13,583 @@
 </head>
 
 <body class="burton-text-primary min-h-screen flex flex-col burton-body">
-    <header class="p-4 shadow-xl burton-header">
+    <header class="p-4 shadow-xl burton-header" role="banner">
         <div class="flex justify-between items-center">
-            <h1 class="text-3xl font-bold burton-text-primary flex items-center gap-2 gothic-shadow">
-                <span class="material-icons burton-text-accent">dark_mode</span>
-                L'Univers de Burton
-            </h1>
-            <nav class="flex space-x-8">
+            <a href="index.html">
+                <h1 class="text-3xl font-bold burton-text-primary flex items-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent" aria-hidden="true">dark_mode</span>
+                    L'Univers de Burton
+                </h1>
+            </a>
+            <nav class="flex space-x-8" role="navigation" aria-label="Navigation principale">
                 <a href="index.html" class="burton-nav-link">Accueil</a>
-                <a href="movies.html" class="burton-nav-link underline">Films</a>
+                <a href="movies.html" class="burton-nav-link underline" aria-current="page">Films</a>
                 <a href="fun_facts.html" class="burton-nav-link">Anecdotes</a>
             </nav>
         </div>
     </header>
 
-    <main class="flex-grow p-6">
-        <div class="flex flex-col space-y-6">
-            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
-            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
-            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
-            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
-        </div>
+    <main class="flex-grow" id="main-content" role="main">
+        <!-- Section Les débuts -->
+        <section class="py-12 px-6 burton-border section-intro" aria-labelledby="debuts-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="debuts-heading" class="text-3xl font-bold burton-text-primary mb-6 text-center flex items-center justify-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent" aria-hidden="true">movie_creation</span>
+                    Les débuts
+                </h2>
+                
+                <div class="grid grid-cols-12 gap-8">
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="p-6 rounded-lg burton-card burton-border h-full">
+                            <div class="text-center mb-4">
+                                <img src="img/Beetlejuice_poster.png" 
+                                     alt="Affiche du film Beetlejuice de 1988 montrant le personnage principal dans son costume rayé iconique" 
+                                     class="w-50 h-80 object-cover rounded burton-border mx-auto mb-4 shadow-lg"
+                                     loading="lazy">
+                                <h3 class="text-xl font-bold burton-text-primary mb-2 gothic-shadow">Beetlejuice</h3>
+                                <p class="burton-text-accent text-sm mb-4">1988</p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Barbara et Adam Maitland meurent dans un accident de voiture et se retrouvent 
+                                        coincés dans leur maison comme fantômes. Quand une famille excentrique s'installe 
+                                        chez eux, ils font appel à Beetlejuice, un "bio-exorciste" chaotique et imprévisible 
+                                        pour les chasser.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">monetization_on</span>
+                                        Box-office
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 15 millions $</p>
+                                        <p><strong>Recettes :</strong> 73,7 millions $ (mondial)</p>
+                                        <p><strong>Succès :</strong> 5x son budget d'investissement</p>
+                                        <p><strong>Performance :</strong> Succès surprise, dépassé toutes les attentes</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">star</span>
+                                        Impact sur Burton
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Ce succès critique et commercial établit Burton comme réalisateur à part entière. 
+                                        Il lui donne la crédibilité nécessaire pour obtenir des budgets plus importants 
+                                        et lance sa collaboration avec Michael Keaton, qui deviendra son Batman l'année suivante.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="p-6 rounded-lg burton-card burton-border h-full">
+                            <div class="text-center mb-4">
+                                <img src="img/EDWARD-AUX-MAINS-DARGENT.jpg" 
+                                     alt="Affiche du film Edward aux mains d'argent de 1990 avec Johnny Depp dans le rôle titre" 
+                                     class="w-42 h-80 object-cover rounded burton-border mx-auto mb-4 shadow-lg"
+                                     loading="lazy">
+                                <h3 class="text-xl font-bold burton-text-primary mb-2 gothic-shadow">Edward aux mains d'argent</h3>
+                                <p class="burton-text-accent text-sm mb-4">1990</p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Edward est un homme artificiel créé par un inventeur qui meurt avant d'avoir pu 
+                                        terminer son œuvre, lui laissant des lames à la place des mains. Adopté par une 
+                                        famille de banlieue, il découvre l'amour et la cruauté du monde réel.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">monetization_on</span>
+                                        Box-office
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 20 millions $</p>
+                                        <p><strong>Recettes :</strong> 86,1 millions $ (mondial)</p>
+                                        <p><strong>Succès :</strong> 4,3x son budget d'investissement</p>
+                                        <p><strong>Performance :</strong> Succès critique et commercial majeur</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">star</span>
+                                        Impact sur Burton
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Ce film consacre Burton comme auteur à part entière et lance la carrière de Johnny Depp. 
+                                        Il établit les codes visuels et thématiques qui définiront l'univers Burton : 
+                                        gothique romantique, marginaux touchants et critique sociale subtile.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-12 px-6 burton-border section-style" aria-labelledby="succes-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="succes-heading" class="text-3xl font-bold burton-text-primary mb-6 text-center flex items-center justify-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent" aria-hidden="true">star</span>
+                    Les grands succès
+                </h2>
+                
+                <div class="grid grid-cols-12 gap-8">
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="p-6 rounded-lg burton-card burton-border h-full">
+                            <div class="text-center mb-4">
+                                <img src="img/batman-poster.png" 
+                                     alt="Affiche du film Batman de 1989 réalisé par Tim Burton avec Michael Keaton" 
+                                     class="w-42 h-80 object-cover rounded burton-border mx-auto mb-4 shadow-lg"
+                                     loading="lazy">
+                                <h3 class="text-xl font-bold burton-text-primary mb-2 gothic-shadow">Batman</h3>
+                                <p class="burton-text-accent text-sm mb-4">1989</p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Bruce Wayne devient Batman pour venger la mort de ses parents et combattre la 
+                                        criminalité à Gotham City. Il doit affronter le Joker, un criminel psychopathe 
+                                        qui terrorise la ville avec ses crimes macabres et son humour twisted.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">monetization_on</span>
+                                        Box-office
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 35 millions $</p>
+                                        <p><strong>Recettes :</strong> 411,3 millions $ (mondial)</p>
+                                        <p><strong>Succès :</strong> 11,7x son budget d'investissement</p>
+                                        <p><strong>Performance :</strong> Phénomène culturel, merchandising record</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">star</span>
+                                        Impact sur Burton
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Énorme succès qui propulse Burton au rang de réalisateur blockbuster. 
+                                        Il prouve qu'un film de super-héros peut être sombre et artistique, 
+                                        ouvrant la voie aux adaptations modernes et lui donnant carte blanche pour ses projets futurs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="p-6 rounded-lg burton-card burton-border h-full">
+                            <div class="text-center mb-4">
+                                <img src="img/enmj-poster.jpg" 
+                                     alt="Affiche du film L'Étrange Noël de Monsieur Jack de 1993, film d'animation en stop-motion" 
+                                     class="w-42 h-80 object-cover rounded burton-border mx-auto mb-4 shadow-lg"
+                                     loading="lazy">
+                                <h3 class="text-xl font-bold burton-text-primary mb-2 gothic-shadow">L'Étrange Noël de Monsieur Jack</h3>
+                                <p class="burton-text-accent text-sm mb-4">1993</p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Jack Skellington, roi d'Halloween Town, découvre Christmas Town et décide de 
+                                        s'approprier Noël. Mais sa version macabre de la fête tourne au cauchemar, 
+                                        l'amenant à redécouvrir sa véritable identité et l'amour de Sally.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">monetization_on</span>
+                                        Box-office
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 18 millions $</p>
+                                        <p><strong>Recettes :</strong> 91,5 millions $ (mondial)</p>
+                                        <p><strong>Succès :</strong> 5x son budget d'investissement</p>
+                                        <p><strong>Performance :</strong> Culte instantané, rééditions multiples</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-2 flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">star</span>
+                                        Impact sur Burton
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Consacre Burton comme maître de l'animation et créateur d'univers iconiques. 
+                                        Jack Skellington devient un symbole pop culture mondial, prouvant que Burton 
+                                        peut créer des œuvres familiales tout en gardant son esthétique unique.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Années 2000 -->
+        <section class="py-12 px-6 burton-border section-collaborations" aria-labelledby="annees2000-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="annees2000-heading" class="text-3xl font-bold burton-text-primary mb-6 text-center flex items-center justify-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent" aria-hidden="true">schedule</span>
+                    Années 2000
+                </h2>
+                
+                <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/bigFish-poster.webp" 
+                                 alt="Affiche du film Big Fish de 2003, conte familial de Tim Burton" 
+                                 class="w-42 h-80 object-cover rounded burton-border mx-auto mb-3 shadow-lg"
+                                 loading="lazy">
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Big Fish</h3>
+                            <p class="burton-text-accent text-sm mb-3">2003</p>
+                            
+                            <div class="space-y-3 text-left">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Un fils tente de comprendre son père mourant à travers ses histoires 
+                                        fantastiques : géants, sorcières et villes magiques.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">monetization_on</span>
+                                        Box-office
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 70M $</p>
+                                        <p><strong>Recettes :</strong> 122M $ (mondial)</p>
+                                        <p><strong>Succès :</strong> 1,7x son budget</p>
+                                        <p><strong>Performance :</strong> Succès critique, 5 Golden Globe nominations</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">star</span>
+                                        Impact
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Démontre la capacité de Burton à traiter des thèmes universels 
+                                        avec sensibilité et poésie.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/Charlie-poster.webp" 
+                                 alt="Affiche du film Charlie et la chocolaterie de 2005 avec Johnny Depp en Willy Wonka" 
+                                 class="w-42 h-80 object-cover rounded burton-border mx-auto mb-3 shadow-lg"
+                                 loading="lazy">
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Charlie et la chocolaterie</h3>
+                            <p class="burton-text-accent text-sm mb-3">2005</p>
+                            
+                            <div class="space-y-3 text-left">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Charlie Bucket visite la mystérieuse chocolaterie de Willy Wonka, 
+                                        un génie excentrique aux méthodes peu orthodoxes.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">monetization_on</span>
+                                        Box-office
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 150M $</p>
+                                        <p><strong>Recettes :</strong> 475M $ (mondial)</p>
+                                        <p><strong>Succès :</strong> 3,2x son budget</p>
+                                        <p><strong>Performance :</strong> Blockbuster familial, merchandising massif</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">star</span>
+                                        Impact
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Succès commercial majeur qui confirme la capacité de Burton 
+                                        à adapter des classiques littéraires.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/noceFunebre-poster.jpg" 
+                                 alt="Affiche du film Les Noces funèbres de 2005, film d'animation en stop-motion" 
+                                 class="w-42 h-80 object-cover rounded burton-border mx-auto mb-3 shadow-lg"
+                                 loading="lazy">
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Les Noces funèbres</h3>
+                            <p class="burton-text-accent text-sm mb-3">2005</p>
+                            
+                            <div class="space-y-3 text-left">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Victor épouse accidentellement Emily, une mariée morte. 
+                                        Tiraillé entre deux mondes, il doit choisir entre amour et devoir.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">monetization_on</span>
+                                        Box-office
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 40M $</p>
+                                        <p><strong>Recettes :</strong> 118M $ (mondial)</p>
+                                        <p><strong>Succès :</strong> 2,9x son budget</p>
+                                        <p><strong>Performance :</strong> Succès critique, nomination Oscar Animation</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">star</span>
+                                        Impact
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Consacre Burton comme maître du stop-motion, 
+                                        alliant technique parfaite et émotion pure.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Dernières œuvres -->
+        <section class="py-12 px-6 burton-border section-impact" aria-labelledby="dernieres-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="dernieres-heading" class="text-3xl font-bold burton-text-primary mb-6 text-center flex items-center justify-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent" aria-hidden="true">new_releases</span>
+                    Dernières œuvres
+                </h2>
+                
+                <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/Alice-poster.png" 
+                                 alt="Affiche du film Alice au pays des merveilles de 2010 avec Johnny Depp en Chapelier fou" 
+                                 class="w-42 h-80 object-cover rounded burton-border mx-auto mb-3 shadow-lg"
+                                 loading="lazy">
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Alice au pays des merveilles</h3>
+                            <p class="burton-text-accent text-sm mb-3">2010</p>
+                            
+                            <div class="space-y-3 text-left">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Alice retourne au Pays des Merveilles pour aider ses habitants 
+                                        à renverser la Reine Rouge tyrannique.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">monetization_on</span>
+                                        Box-office
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 200M $</p>
+                                        <p><strong>Recettes :</strong> 1,025B $ (mondial)</p>
+                                        <p><strong>Succès :</strong> 5,1x son budget</p>
+                                        <p><strong>Performance :</strong> Plus gros succès de Burton, phénomène 3D</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">star</span>
+                                        Impact
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Plus gros succès de Burton, prouve sa maîtrise 
+                                        des blockbusters modernes et des effets visuels.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/dumbo-poster.webp" 
+                                 alt="Affiche du film Dumbo de 2019, adaptation live-action du classique Disney par Tim Burton" 
+                                 class="w-42 h-80 object-cover rounded burton-border mx-auto mb-3 shadow-lg"
+                                 loading="lazy">
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Dumbo</h3>
+                            <p class="burton-text-accent text-sm mb-3">2019</p>
+                            
+                            <div class="space-y-3 text-left">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Un éléphanteau aux grandes oreilles découvre qu'il peut voler, 
+                                        devenant l'attraction vedette d'un cirque en difficulté.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">monetization_on</span>
+                                        Box-office
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 170M $</p>
+                                        <p><strong>Recettes :</strong> 353M $ (mondial)</p>
+                                        <p><strong>Succès :</strong> 2,1x son budget</p>
+                                        <p><strong>Performance :</strong> Succès modéré, accueil mitigé critique</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">star</span>
+                                        Impact
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Retour aux sources pour Burton, retrouvant 
+                                        sa tendresse pour les êtres différents et marginalisés.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/wednesday-poster.jfif" 
+                                 alt="Affiche de la série Wednesday de 2022, série Netflix sur Wednesday Addams adolescente" 
+                                 class="w-42 h-80 object-cover rounded burton-border mx-auto mb-3 shadow-lg"
+                                 loading="lazy">
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Wednesday</h3>
+                            <p class="burton-text-accent text-sm mb-3">2022</p>
+                            
+                            <div class="space-y-3 text-left">
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">description</span>
+                                        Synopsis
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Wednesday Addams enquête sur les mystères surnaturels 
+                                        de l'académie Nevermore tout en maîtrisant ses pouvoirs psychiques.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm" aria-hidden="true">visibility</span>
+                                        Audience
+                                    </h4>
+                                    <div class="burton-text-primary text-base space-y-1">
+                                        <p><strong>Budget :</strong> 57M $ (saison 1)</p>
+                                        <p><strong>Vues :</strong> 1,7B heures (Netflix)</p>
+                                        <p><strong>Performance :</strong> Phénomène viral mondial, danse TikTok</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold burton-text-accent mb-1 text-sm flex items-center gap-1">
+                                        <span class="material-icons text-sm">star</span>
+                                        Impact
+                                    </h4>
+                                    <p class="burton-text-primary text-base leading-relaxed">
+                                        Phénomène mondial qui relance la carrière de Burton 
+                                        et prouve sa capacité à conquérir les nouvelles générations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 mt-6">
+                        <div class="p-4 rounded border-l-4 border-purple-500 burton-quote">
+                            <span class="material-icons burton-text-primary mb-2 block text-center">format_quote</span>
+                            <p class="italic text-purple-200 text-center gothic-shadow">
+                                "Chaque film est un voyage dans l'imaginaire, une exploration de ce qui nous rend différents et beaux."
+                            </p>
+                            <p class="burton-text-primary text-sm text-center mt-2 gothic-shadow">— Tim Burton</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="p-6 burton-footer">
+    <footer class="p-6 burton-footer" role="contentinfo">
         <div class="flex justify-between items-center">
             <div>
                 <h3 class="burton-text-accent text-lg">Allyson Lefebvre</h3>
                 <p class="burton-text-primary text-sm flex items-center gap-1 gothic-shadow">
                     © 2025 L'Univers de Burton
-                    <span class="material-icons text-sm burton-text-accent">nightlife</span>
+                    <span class="material-icons text-sm burton-text-accent" aria-hidden="true">nightlife</span>
                 </p>
             </div>
         </div>
