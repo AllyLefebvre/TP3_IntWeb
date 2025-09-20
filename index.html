@@ -11,96 +11,309 @@
     <link rel="stylesheet" href="sass/styles.css">
 </head>
 
-<body class="bg-gray-900 text-white min-h-screen flex flex-col burton-body">
-    <header class="bg-black p-4 border-b-4 border-purple-800 shadow-xl">
+<body class="burton-text-primary min-h-screen flex flex-col burton-body">
+    <header class="p-4 shadow-xl burton-header">
         <div class="flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-purple-300 flex items-center gap-2 gothic-shadow">
-                <span class="material-icons text-purple-400">dark_mode</span>
+            <h1 class="text-3xl font-bold burton-text-primary flex items-center gap-2 gothic-shadow">
+                <span class="material-icons burton-text-accent">dark_mode</span>
                 L'Univers de Burton
             </h1>
             <nav class="flex space-x-8">
-                <a href="index.html"
-                    class="text-purple-300 underline hover:text-purple-200 transition-colors">Accueil</a>
-                <a href="movies.html" class="text-gray-300 hover:text-purple-300 transition-colors">Films</a>
-                <a href="fun_facts.html" class="text-gray-300 hover:text-purple-300 transition-colors">Anecdotes</a>
+                <a href="index.html" class="burton-nav-link underline">Accueil</a>
+                <a href="movies.html" class="burton-nav-link">Films</a>
+                <a href="fun_facts.html" class="burton-nav-link">Anecdotes</a>
             </nav>
         </div>
     </header>
 
     <main class="flex-grow">
-        <section class="py-12 px-6 bg-gray-800 border-y border-purple-800 section-intro">
+        <section class="py-12 px-6 burton-border section-intro">
             <div class="max-w-6xl mx-auto">
                 <h2
-                    class="text-3xl font-bold text-purple-300 mb-6 text-center flex items-center justify-center gap-2 gothic-shadow">
-                    <span class="material-icons text-purple-400">theater_comedy</span>
+                    class="text-3xl font-bold burton-text-primary mb-6 text-center flex items-center justify-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent">theater_comedy</span>
                     Introduction / Biographie
                 </h2>
 
-                <div class="text-center mb-8">
-                    <img src="img/Tim_Burton-wiki.jpg" alt="Tim Burton"
-                        class="w-40 h-52 object-cover rounded-full border-4 border-purple-600 shadow-2xl mx-auto mb-4 burton-photo">
-                    <h3 class="text-2xl font-bold text-purple-300 mb-2 gothic-shadow">Timothy Walter Burton</h3>
-                    <p class="text-purple-200 text-lg gothic-shadow">Réalisateur • Producteur • Scénariste</p>
-                    <p class="text-gray-400 text-sm mt-1">Né le 25 août 1958 à Burbank, Californie</p>
+                <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-12 text-center mb-8">
+                        <img src="img/Tim_Burton-wiki.jpg" alt="Tim Burton"
+                            class="w-40 h-52 object-cover rounded-full border-4 border-purple-600 shadow-2xl mx-auto mb-4 burton-photo">
+                        <h3 class="text-2xl font-bold burton-text-primary mb-2 gothic-shadow">Timothy Walter Burton</h3>
+                        <p class="burton-text-accent text-lg gothic-shadow">Réalisateur • Producteur • Scénariste</p>
+                        <p class="burton-text-primary text-sm mt-1">Né le 25 août 1958 à Burbank, Californie</p>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-card border border-purple-700 h-full">
+                            <span class="material-icons text-3xl burton-text-accent mb-2 block">child_care</span>
+                            <h4 class="font-bold burton-text-primary mb-2 gothic-shadow">Ses origines</h4>
+                            <p class="burton-text-primary text-sm">
+                                Enfant introverti passionné par les films d'horreur des années 1950-60 et le dessin,
+                                Burton grandit dans la banlieue de Los Angeles. Il développe très tôt un univers visuel
+                                unique
+                                mêlant innocence enfantine et noirceur gothique, inspiré par les œuvres d'Edgar Allan Poe
+                                et les films de Vincent Price.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-card border border-purple-700 h-full">
+                            <span class="material-icons text-3xl burton-text-accent mb-2 block">school</span>
+                            <h4 class="font-bold burton-text-primary mb-2 gothic-shadow">Formation</h4>
+                            <p class="burton-text-primary text-sm">
+                                Diplômé du prestigieux California Institute of the Arts (CalArts) en 1979,
+                                Burton y développe ses compétences en animation et storytelling. Il y réalise
+                                ses premiers courts-métrages expérimentaux et affine son style artistique distinctif,
+                                attirant déjà l'attention par son approche non-conventionnelle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-card border border-purple-700 h-full">
+                            <span class="material-icons text-3xl burton-text-accent mb-2 block">work</span>
+                            <h4 class="font-bold burton-text-primary mb-2 gothic-shadow">Débuts Disney</h4>
+                            <p class="burton-text-primary text-sm">
+                                Recruté comme animateur chez Disney en 1979, Burton se sent rapidement à l'étroit
+                                dans l'esthétique traditionnelle du studio. Il réalise "Vincent" (1982), un court-métrage
+                                en stop-motion hommage à Vincent Price, puis "Frankenweenie" (1984), parodie gothique
+                                de Frankenstein qui révèle sa signature artistique unique et lui vaut sa première
+                                reconnaissance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 mt-6">
+                        <div class="p-4 rounded border-l-4 burton-quote border border-purple-700">
+                            <span class="material-icons burton-text-accent mb-2 block text-center">format_quote</span>
+                            <p class="italic burton-text-primary text-center gothic-shadow">
+                                "Je n'ai jamais vraiment correspondu au moule Disney, mais cette expérience m'a appris
+                                les bases de l'animation et du storytelling."
+                            </p>
+                            <p class="burton-text-accent text-sm text-center mt-2 gothic-shadow">— Tim Burton</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
+        <section class="py-12 px-6 burton-border section-style">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold burton-text-primary mb-6 flex items-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent">palette</span>
+                    Style artistique
+                </h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                    <div class="bg-gray-700 p-4 rounded text-center border border-purple-700 burton-card">
-                        <span class="material-icons text-3xl text-purple-400 mb-2 block">child_care</span>
-                        <h4 class="font-bold text-purple-300 mb-2 gothic-shadow">Ses origines</h4>
-                        <p class="text-gray-300 text-sm">
-                            Enfant introverti passionné par les films d'horreur des années 1950-60 et le dessin,
-                            Burton grandit dans la banlieue de Los Angeles. Il développe très tôt un univers visuel
-                            unique
-                            mêlant innocence enfantine et noirceur gothique, inspiré par les œuvres d'Edgar Allan Poe
-                            et les films de Vincent Price.
-                        </p>
+                <div class="grid grid-cols-12 gap-8 burton-text-primary">
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="h-full p-6 rounded-lg burton-card burton-border">
+                            <img src="img/burton-univers.jpg" alt="Univers visuel Burton"
+                                class="w-full h-64 object-cover rounded mb-4 burton-border">
+                            <h3 class="text-xl burton-text-primary font-bold mb-3 gothic-shadow text-center">Un univers visuel unique</h3>
+                            <p class="leading-relaxed text-sm text-center">
+                                L'univers visuel de Tim Burton se caractérise par un mélange fascinant de gothique
+                                romantique et de poésie sombre. Ses films créent une atmosphère à la fois inquiétante et
+                                mélancolique, où la beauté naît de l'étrangeté.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="bg-gray-700 p-4 rounded text-center border border-purple-700 burton-card">
-                        <span class="material-icons text-3xl text-purple-400 mb-2 block">school</span>
-                        <h4 class="font-bold text-purple-300 mb-2 gothic-shadow">Formation</h4>
-                        <p class="text-gray-300 text-sm">
-                            Diplômé du prestigieux California Institute of the Arts (CalArts) en 1979,
-                            Burton y développe ses compétences en animation et storytelling. Il y réalise
-                            ses premiers courts-métrages expérimentaux et affine son style artistique distinctif,
-                            attirant déjà l'attention par son approche non-conventionnelle.
-                        </p>
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="h-full p-6 rounded-lg burton-card burton-border">
+                            <img src="img/burton-gothique.webp" alt="Esthétique gothique Burton"
+                                class="w-full h-64 object-cover rounded mb-4 burton-border">
+                            <h3 class="text-xl burton-text-primary font-bold mb-3 gothic-shadow text-center">Esthétique gothique et poétique</h3>
+                            <p class="leading-relaxed text-sm text-center">
+                                Burton puise dans l'esthétique gothique pour créer des mondes oniriques où l'obscurité
+                                révèle une beauté cachée. Ses décors évoquent les contes de fées macabres,
+                                mêlant innocence enfantine et terreur sublime.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="bg-gray-700 p-4 rounded text-center border border-purple-700 burton-card">
-                        <span class="material-icons text-3xl text-purple-400 mb-2 block">work</span>
-                        <h4 class="font-bold text-purple-300 mb-2 gothic-shadow">Débuts Disney</h4>
-                        <p class="text-gray-300 text-sm">
-                            Recruté comme animateur chez Disney en 1979, Burton se sent rapidement à l'étroit
-                            dans l'esthétique traditionnelle du studio. Il réalise "Vincent" (1982), un court-métrage
-                            en stop-motion hommage à Vincent Price, puis "Frankenweenie" (1984), parodie gothique
-                            de Frankenstein qui révèle sa signature artistique unique et lui vaut sa première
-                            reconnaissance.
-                        </p>
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="h-full p-6 rounded-lg burton-card burton-border">
+                            <img src="img/burton-noir-blanc.jpg" alt="Style noir et blanc Burton"
+                                class="w-full h-64 object-cover rounded mb-4 burton-border">
+                            <h3 class="text-xl burton-text-primary font-bold mb-3 gothic-shadow text-center">Maîtrise du noir et blanc</h3>
+                            <p class="leading-relaxed text-sm text-center">
+                                Le contraste entre noir et blanc est une signature visuelle majeure. Burton utilise
+                                cette dualité pour créer des compositions dramatiques, symbolisant souvent
+                                l'opposition entre bien et mal, normal et étrange.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="bg-gray-700 p-4 rounded border-l-4 border-purple-500 burton-quote">
-                    <span class="material-icons text-purple-300 mb-2 block text-center">format_quote</span>
-                    <p class="italic text-purple-200 text-center gothic-shadow">
-                        "Je n'ai jamais vraiment correspondu au moule Disney, mais cette expérience m'a appris
-                        les bases de l'animation et du storytelling."
-                    </p>
-                    <p class="text-purple-300 text-sm text-center mt-2 gothic-shadow">— Tim Burton</p>
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="h-full p-6 rounded-lg burton-card burton-border">
+                            <img src="img/burton-spirale.jpg" alt="Spirales et contrastes Burton"
+                                class="w-full h-64 object-cover rounded mb-4 burton-border">
+                            <h3 class="text-xl burton-text-primary font-bold mb-3 gothic-shadow text-center">Spirales et contrastes</h3>
+                            <p class="leading-relaxed text-sm text-center">
+                                Les formes spiralées apparaissent constamment dans son œuvre, évoquant l'hypnose
+                                et le vertige. Ces motifs, associés aux contrastes saisissants, créent une
+                                dynamique visuelle hypnotique qui marque profondément le spectateur.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <section class="py-12 px-6 burton-border section-collaborations">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold burton-text-primary mb-6 flex items-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent">handshake</span>
+                    Collaborations récurrentes
+                </h2>
+
+                <div class="grid grid-cols-12 gap-8 burton-text-primary">
+                    <div class="col-span-12">
+                        <h3 class="text-xl burton-text-primary font-semibold mb-6">Acteurs fétiches</h3>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/johnnyDepp.webp" alt="Johnny Depp"
+                                class="w-24 h-32 object-cover rounded-full border-2 border-purple-400 mx-auto mb-3">
+                            <h4 class="font-bold burton-text-primary mb-2 gothic-shadow">Johnny Depp</h4>
+                            <p class="text-sm burton-text-primary">Collaborations : Edward aux mains d'argent, Ed
+                                Wood, Sleepy Hollow, Charlie et la chocolaterie, Alice au pays des merveilles,
+                                Dark Shadows</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/helena.webp" alt="Helena Bonham Carter"
+                                class="w-24 h-32 object-cover rounded-full border-2 border-purple-400 mx-auto mb-3">
+                            <h4 class="font-bold burton-text-primary mb-2 gothic-shadow">Helena Bonham Carter</h4>
+                            <p class="text-sm burton-text-primary">Collaborations : Planet of the Apes, Big Fish,
+                                Charlie et la chocolaterie, Les Noces funèbres, Sweeney Todd, Alice au pays des
+                                merveilles</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/michael.webp" alt="Michael Keaton"
+                                class="w-24 h-32 object-cover rounded-full border-2 border-purple-400 mx-auto mb-3">
+                            <h4 class="font-bold burton-text-primary mb-2 gothic-shadow">Michael Keaton</h4>
+                            <p class="text-sm burton-text-primary">Collaborations : Beetlejuice, Batman, Batman
+                                Returns, Dumbo</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 mt-8">
+                        <h3 class="text-xl burton-text-primary font-semibold mb-6">Collaborateurs techniques</h3>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/danny.webp" alt="Danny Elfman"
+                                class="w-24 h-32 object-cover rounded-full border-2 border-purple-400 mx-auto mb-3">
+                            <h4 class="font-bold burton-text-primary mb-2 gothic-shadow">Danny Elfman</h4>
+                            <p class="text-sm burton-text-primary">Compositeur attitré depuis 1985. Ses mélodies gothiques et théâtrales sont indissociables de l'univers Burton : Batman, Edward aux mains d'argent, L'Étrange Noël de Mr. Jack.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/colleen.webp" alt="Colleen Atwood"
+                                class="w-24 h-32 object-cover rounded-full border-2 border-purple-400 mx-auto mb-3">
+                            <h4 class="font-bold burton-text-primary mb-2 gothic-shadow">Colleen Atwood</h4>
+                            <p class="text-sm burton-text-primary">Costumière de génie, 3 fois oscarisée. Elle crée les costumes iconiques des films Burton : Edward aux mains d'argent, Sleepy Hollow, Sweeney Todd, Alice au pays des merveilles.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 lg:col-span-4">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <img src="img/Rick.jfif" alt="Rick Heinrichs"
+                                class="w-24 h-32 object-cover rounded-full border-2 border-purple-400 mx-auto mb-3">
+                            <h4 class="font-bold burton-text-primary mb-2 gothic-shadow">Rick Heinrichs</h4>
+                            <p class="text-sm burton-text-primary">Directeur artistique et chef décorateur. Il conçoit les décors gothiques et surréalistes : Sleepy Hollow, Planet of the Apes, Dark Shadows. Oscar pour Sleepy Hollow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-6 burton-border section-impact">
+
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold burton-text-primary mb-6 flex items-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent">star</span>
+                    Impact et influence
+                </h2>
+
+                <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <span class="material-icons text-3xl burton-text-accent mb-2 block">palette</span>
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Pop Culture</h3>
+                            <p class="burton-text-primary text-sm">
+                                Burton a révolutionné l'esthétique moderne, inspirant artistes et créateurs.
+                                Son univers apparaît dans la musique, les jeux vidéo et l'art contemporain.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <span class="material-icons text-3xl burton-text-accent mb-2 block">movie</span>
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Cinéma</h3>
+                            <p class="burton-text-primary text-sm">
+                                Il a démocratisé le fantastique grand public et ouvert la voie
+                                à de nombreux réalisateurs d'univers visuels singuliers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <span class="material-icons text-3xl burton-text-accent mb-2 block">checkroom</span>
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Mode</h3>
+                            <p class="burton-text-primary text-sm">
+                                L'esthétique "Burton" définit la mode alternative avec ses rayures,
+                                contrastes noir & blanc et silhouettes excentriques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6 lg:col-span-6">
+                        <div class="p-4 rounded text-center burton-border burton-card h-full">
+                            <span class="material-icons text-3xl burton-text-accent mb-2 block">groups</span>
+                            <h3 class="font-bold burton-text-primary mb-2 gothic-shadow">Communauté</h3>
+                            <p class="burton-text-primary text-sm">
+                                Une communauté mondiale de fans célèbre son univers à travers
+                                l'art, les conventions et les créations artistiques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 mt-6">
+                        <div class="p-4 rounded border-l-4 border-purple-500 burton-quote">
+                            <span class="material-icons burton-text-primary mb-2 block text-center">format_quote</span>
+                            <p class="italic text-purple-200 text-center gothic-shadow">
+                                "Burton n'a pas seulement créé des films, il a créé un langage visuel universel
+                                qui parle à tous ceux qui se sentent différents."
+                            </p>
+                            <p class="burton-text-primary text-sm text-center mt-2 gothic-shadow">— Critique cinématographique</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-black p-6 border-t-4 border-purple-500">
+    <footer class="p-6 burton-footer">
         <div class="flex justify-between items-center">
             <div>
-                <h3 class="text-purple-400 text-lg">Allyson Lefebvre</h3>
-                <p class="text-gray-500 text-sm flex items-center gap-1 gothic-shadow">
+                <h3 class="burton-text-accent text-lg">Allyson Lefebvre</h3>
+                <p class="burton-text-primary text-sm flex items-center gap-1 gothic-shadow">
                     © 2025 L'Univers de Burton
-                    <span class="material-icons text-sm text-purple-400">nightlife</span>
+                    <span class="material-icons text-sm burton-text-accent">nightlife</span>
                 </p>
             </div>
         </div>
