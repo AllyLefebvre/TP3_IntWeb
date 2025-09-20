@@ -1,0 +1,21 @@
+.gothic-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.burton-card {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.2);
+}
+
+.section-intro {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.section-style {
+  background: linear-gradient(135deg, #2a2a3e, #1a1a2e);
+}
+
+.burton-quote {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.3);
+}/*# sourceMappingURL=styles.css.map */
