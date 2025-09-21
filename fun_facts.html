@@ -1,50 +1,415 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anecdote de tournage</title>
+    <meta name="description"
+        content="Découvrez les anecdotes fascinantes et secrets de tournage de Tim Burton : ses inspirations, son daltonisme, ses techniques artisanales et les coulisses de ses films cultes.">
+    <title>Anecdotes et secrets de Tim Burton - L'Univers de Burton</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sass/styles.css">
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
+
 <body class="burton-text-primary min-h-screen flex flex-col burton-body">
-    <header class="p-4 shadow-xl burton-header">
+    <header class="p-4 shadow-xl burton-header" role="banner">
         <div class="flex justify-between items-center">
             <a href="index.html">
                 <h1 class="text-3xl font-bold burton-text-primary flex items-center gap-2 gothic-shadow">
-                    <span class="material-icons burton-text-accent">dark_mode</span>
+                    <span class="material-icons burton-text-accent" aria-hidden="true">dark_mode</span>
                     L'Univers de Burton
                 </h1>
             </a>
-            <nav class="flex space-x-8">
+            <nav class="flex space-x-8" role="navigation" aria-label="Navigation principale">
                 <a href="index.html" class="burton-nav-link">Accueil</a>
                 <a href="movies.html" class="burton-nav-link">Films</a>
-                <a href="fun_facts.html" class="burton-nav-link underline">Anecdotes</a>
+                <a href="fun_facts.html" class="burton-nav-link underline" aria-current="page">Anecdotes</a>
             </nav>
         </div>
     </header>
 
-    <main class="flex-grow p-6">
-        <div class="flex flex-col space-y-6">
-            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
-            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
-            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
-            <section class="p-4 bg-gray-800 rounded border border-purple-500"></section>
+    <main class="flex-grow" id="main-content" role="main">
+        <section class="py-12 px-6 burton-border section-intro" aria-labelledby="inspirations-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="inspirations-heading"
+                    class="text-3xl font-bold burton-text-primary mb-8 text-center flex items-center justify-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent" aria-hidden="true">lightbulb</span>
+                    Ses inspirations
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="burton-card p-6 rounded-lg burton-border">
+                        <div class="text-center mb-4">
+                            <span class="material-icons text-4xl burton-text-accent">palette</span>
+                            <h3 class="text-xl font-bold burton-text-primary mt-3 mb-3">Expressionnisme allemand</h3>
+                        </div>
+                        <p class="burton-text-primary text-base leading-relaxed text-center">
+                            Les ombres dramatiques et décors déformés du "Cabinet du Dr. Caligari"
+                            et de "Nosferatu" façonnent sa vision artistique dès l'enfance.
+                        </p>
+                        <div class="mt-3 text-center">
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs">Années 1920</span>
+                        </div>
+                    </div>
+                    <div class="burton-card p-6 rounded-lg burton-border">
+                        <div class="text-center mb-4">
+                            <span class="material-icons text-4xl burton-text-accent">movie</span>
+                            <h3 class="text-xl font-bold burton-text-primary mt-3 mb-3">Cinéma d'horreur classique</h3>
+                        </div>
+                        <p class="burton-text-primary text-base leading-relaxed text-center">
+                            Universal et Hammer Horror nourrissent son imaginaire gothique.
+                            Dracula, Frankenstein deviennent ses références esthétiques.
+                        </p>
+                        <div class="mt-3 text-center">
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs">Années
+                                1930-1960</span>
+                        </div>
+                    </div>
+                    <div class="burton-card p-6 rounded-lg burton-border">
+                        <div class="text-center mb-4">
+                            <span class="material-icons text-4xl burton-text-accent">person</span>
+                            <h3 class="text-xl font-bold burton-text-primary mt-3 mb-3">Vincent Price</h3>
+                        </div>
+                        <p class="burton-text-primary text-base leading-relaxed text-center">
+                            Son idole absolue inspire ses anti-héros charismatiques.
+                            Burton lui rend hommage dans "Vincent" (1982).
+                        </p>
+                        <div class="mt-3 text-center">
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs">Influence
+                                permanente</span>
+                        </div>
+                    </div>
+                    <div class="burton-card p-6 rounded-lg burton-border">
+                        <div class="text-center mb-4">
+                            <span class="material-icons text-4xl burton-text-accent">menu_book</span>
+                            <h3 class="text-xl font-bold burton-text-primary mt-3 mb-3">Edgar Allan Poe</h3>
+                        </div>
+                        <p class="burton-text-primary text-base leading-relaxed text-center">
+                            L'écrivain gothique américain influence profondément Burton.
+                            Ses contes macabres inspirent l'atmosphère sombre et poétique de ses films.
+                        </p>
+                        <div class="mt-3 text-center">
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs">Littérature
+                                gothique</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-6 burton-border section-style" aria-labelledby="secrets-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="secrets-heading"
+                    class="text-3xl font-bold burton-text-primary mb-8 text-center flex items-center justify-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent" aria-hidden="true">lock_open</span>
+                    Secrets révélés
+                </h2>
+                <div id="accordion-secrets" data-accordion="collapse" data-active-classes="bg-purple-800 burton-text-primary" data-inactive-classes="burton-text-primary">
+                    <h2 id="accordion-secrets-heading-1">
+                        <button type="button" class="bg-red-900 border border-red-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg focus:ring-4 focus:ring-red-200 hover:bg-red-800 gap-3" data-accordion-target="#accordion-secrets-body-1" aria-expanded="false" aria-controls="accordion-secrets-body-1">
+                            <div class="flex items-center">
+                                <span class="material-icons text-red-400 mr-3">visibility_off</span>
+                                <span class="text-xl font-bold text-red-100">Secret #1 : Le daltonisme de Burton</span>
+                            </div>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-red-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-secrets-body-1" class="hidden" aria-labelledby="accordion-secrets-heading-1">
+                        <div class="p-6 bg-red-900 border border-red-500 mt-2 rounded-lg">
+                            <p class="text-red-100 text-base leading-relaxed">
+                                Burton ne voit pas les couleurs comme nous ! Son daltonisme explique
+                                sa palette si distinctive : noir/blanc, bleus profonds, oranges vifs.
+                                Cette "limitation" devient sa signature visuelle unique et contribue
+                                à l'unicité de son univers esthétique.
+                            </p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-secrets-heading-2">
+                        <button type="button" class="bg-green-900 border border-green-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg focus:ring-4 focus:ring-green-200 hover:bg-green-800 gap-3 mt-4" data-accordion-target="#accordion-secrets-body-2" aria-expanded="false" aria-controls="accordion-secrets-body-2">
+                            <div class="flex items-center">
+                                <span class="material-icons text-green-400 mr-3">brush</span>
+                                <span class="text-xl font-bold text-green-100">Secret #2 : Dessins artisanaux</span>
+                            </div>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-secrets-body-2" class="hidden" aria-labelledby="accordion-secrets-heading-2">
+                        <div class="p-6 bg-green-900 border border-green-500 mt-2 rounded-lg">
+                            <p class="text-green-100 text-base leading-relaxed">
+                                Malgré sa célébrité mondiale, Burton continue de dessiner personnellement
+                                chaque personnage avant le tournage. Ces croquis, réalisés au crayon ou à l'encre,
+                                servent de bible visuelle pour toute l'équipe et garantissent la cohérence
+                                parfaite de son univers visuel.
+                            </p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-secrets-heading-3">
+                        <button type="button" class="bg-blue-900 border border-blue-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800 gap-3 mt-4" data-accordion-target="#accordion-secrets-body-3" aria-expanded="false" aria-controls="accordion-secrets-body-3">
+                            <div class="flex items-center">
+                                <span class="material-icons text-blue-400 mr-3">pets</span>
+                                <span class="text-xl font-bold text-blue-100">Secret #3 : Sa phobie des singes</span>
+                            </div>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-secrets-body-3" class="hidden" aria-labelledby="accordion-secrets-heading-3">
+                        <div class="p-6 bg-blue-900 border border-blue-500 mt-2 rounded-lg">
+                            <p class="text-blue-100 text-base leading-relaxed">
+                                Burton a une véritable phobie des singes ! Cette peur remonte à son enfance
+                                et explique pourquoi il a eu tant de difficultés à réaliser "Planet of the Apes" (2001).
+                                Il devait constamment détourner le regard pendant les scènes avec les acteurs
+                                en costume de singes, ce qui rendait la direction d'acteurs particulièrement complexe.
+                            </p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-secrets-heading-4">
+                        <button type="button" class="bg-purple-900 border border-purple-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg focus:ring-4 focus:ring-purple-200 hover:bg-purple-800 gap-3 mt-4" data-accordion-target="#accordion-secrets-body-4" aria-expanded="false" aria-controls="accordion-secrets-body-4">
+                            <div class="flex items-center">
+                                <span class="material-icons text-purple-400 mr-3">business</span>
+                                <span class="text-xl font-bold text-purple-100">Secret #4 : Viré de Disney pour "Frankenweenie"</span>
+                            </div>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-purple-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-secrets-body-4" class="hidden" aria-labelledby="accordion-secrets-heading-4">
+                        <div class="p-6 bg-purple-900 border border-purple-500 mt-2 rounded-lg">
+                            <p class="text-purple-100 text-base leading-relaxed">
+                                En 1984, Disney a licencié Burton après qu'il ait réalisé "Frankenweenie",
+                                le jugeant "trop effrayant pour les enfants". Ironiquement, ce même court-métrage
+                                lui a ouvert les portes d'Hollywood et a lancé sa carrière. Disney a même
+                                racheté les droits en 2012 pour en faire un long-métrage, reconnaissant
+                                finalement le génie de Burton !
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-6 burton-border section-collaborations" aria-labelledby="coulisses-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="coulisses-heading"
+                    class="text-3xl font-bold burton-text-primary mb-8 text-center flex items-center justify-center gap-2 gothic-shadow">
+                    <span class="material-icons burton-text-accent" aria-hidden="true">construction</span>
+                    Dans les coulisses de la magie
+                </h2>
+                <div class="space-y-8">
+                    <div class="burton-card p-6 rounded burton-border">
+                        <div class="flex items-start space-x-4">
+                            <span class="material-icons text-4xl burton-text-accent flex-shrink-0">animation</span>
+                            <div>
+                                <h3 class="text-xl font-bold burton-text-primary mb-3">La création de Jack Skellington
+                                </h3>
+                                <p class="burton-text-primary text-base mb-4">
+                                    Jack Skellington a été entièrement créé en stop-motion, technique d'animation image
+                                    par image.
+                                    L'équipe a fabriqué plus de 400 têtes différentes pour Jack, chacune exprimant une
+                                    émotion spécifique.
+                                    Le processus était si complexe qu'il fallait parfois une journée entière pour animer
+                                    seulement quelques secondes.
+                                </p>
+                                <div class="bg-purple-900 p-3 rounded">
+                                    <p class="text-purple-200 text-sm">
+                                        ⏱️ <strong>Temps de travail :</strong> 1 journée = 3 secondes d'animation
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burton-card p-6 rounded burton-border">
+                        <div class="flex items-start space-x-4">
+                            <span class="material-icons text-4xl burton-text-accent flex-shrink-0">landscape</span>
+                            <div>
+                                <h3 class="text-xl font-bold burton-text-primary mb-3">Les décors de Sleepy Hollow</h3>
+                                <p class="burton-text-primary text-base mb-4">
+                                    Burton a combiné de vrais décors construits en studio avec des fonds peints à la
+                                    main,
+                                    technique héritée des films classiques d'Hollywood. Cette approche hybride crée une
+                                    atmosphère
+                                    irréelle et onirique que les effets numériques ne peuvent reproduire. Cette méthode
+                                    artisanale
+                                    apporte une texture et une profondeur uniques.
+                                </p>
+                                <div class="bg-purple-900 p-3 rounded">
+                                    <p class="text-purple-200 text-sm">
+                                        🎨 <strong>Technique :</strong> Décors réels + peintures sur toile
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <div class="inline-block burton-quote p-4 rounded-lg border border-purple-500">
+                        <span class="material-icons burton-text-accent text-2xl mb-2 block">format_quote</span>
+                        <p class="italic text-purple-200 gothic-shadow">
+                            "Je préfère les techniques artisanales aux effets numériques.
+                            Elles donnent une âme que la technologie ne peut reproduire."
+                        </p>
+                        <p class="burton-text-accent text-sm mt-2 gothic-shadow">— Tim Burton</p>
+                    </div>
+                </div>
+             </div>
+         </section>
+
+         <section class="py-12 px-6 burton-border section-impact" aria-labelledby="form-heading">
+             <div class="max-w-6xl mx-auto">
+                 <h2 id="form-heading"
+                     class="text-3xl font-bold burton-text-primary mb-8 text-center flex items-center justify-center gap-2 gothic-shadow">
+                     <span class="material-icons burton-text-accent" aria-hidden="true">edit</span>
+                     Partagez vos anecdotes Burton
+                 </h2>
+
+                 <div class="burton-card p-8 rounded-lg burton-border max-w-4xl mx-auto">
+                     <p class="burton-text-primary text-center mb-8 text-base">
+                         Vous connaissez une anecdote ou un fun fact sur Tim Burton ? 
+                         Partagez-le avec la communauté des fans !
+                     </p>
+
+                     <form class="space-y-6" action="#" method="POST">
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                             <div>
+                                 <label for="nom" class="block mb-2 text-sm font-medium burton-text-accent">
+                                     <span class="material-icons text-sm mr-1 align-middle">person</span>
+                                     Votre nom *
+                                 </label>
+                                 <input type="text" id="nom" name="nom"
+                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                     placeholder="Votre nom complet">
+                             </div>
+                             <div>
+                                 <label for="email" class="block mb-2 text-sm font-medium burton-text-accent">
+                                     <span class="material-icons text-sm mr-1 align-middle">email</span>
+                                     Votre email *
+                                 </label>
+                                 <input type="text" id="email" name="email"
+                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                     placeholder="votre.email@exemple.com">
+                             </div>
+                         </div>
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                             <div>
+                                 <label for="titre" class="block mb-2 text-sm font-medium burton-text-accent">
+                                     <span class="material-icons text-sm mr-1 align-middle">title</span>
+                                     Titre de l'anecdote *
+                                 </label>
+                                 <input type="text" id="titre" name="titre"
+                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                     placeholder="Ex: Le secret de Jack Skellington">
+                             </div>
+                             <div>
+                                 <label for="categorie" class="block mb-2 text-sm font-medium burton-text-accent">
+                                     <span class="material-icons text-sm mr-1 align-middle">category</span>
+                                     Catégorie *
+                                 </label>
+                                 <select id="categorie" name="categorie"
+                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500">
+                                     <option value="">Choisir une catégorie</option>
+                                     <option value="tournage">Coulisses de tournage</option>
+                                     <option value="personnel">Vie personnelle</option>
+                                     <option value="inspiration">Sources d'inspiration</option>
+                                     <option value="technique">Techniques créatives</option>
+                                     <option value="collaboration">Collaborations</option>
+                                     <option value="autre">Autre</option>
+                                 </select>
+                             </div>
+                         </div>
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                             <div>
+                                 <label for="film" class="block mb-2 text-sm font-medium burton-text-accent">
+                                     <span class="material-icons text-sm mr-1 align-middle">movie</span>
+                                     Film concerné
+                                 </label>
+                                 <input type="text" id="film" name="film"
+                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                     placeholder="Ex: Beetlejuice, Edward aux mains d'argent...">
+                             </div>
+                             <div>
+                                 <label for="annee" class="block mb-2 text-sm font-medium burton-text-accent">
+                                     <span class="material-icons text-sm mr-1 align-middle">calendar_today</span>
+                                     Année (si applicable)
+                                 </label>
+                                 <input type="number" id="annee" name="annee" min="1980" max="2025"
+                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                     placeholder="Ex: 1988">
+                             </div>
+                         </div>
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                             <div>
+                                 <label for="source" class="block mb-2 text-sm font-medium burton-text-accent">
+                                     <span class="material-icons text-sm mr-1 align-middle">source</span>
+                                     Source de l'information *
+                                 </label>
+                                 <input type="text" id="source" name="source"
+                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                     placeholder="Ex: https://example.com/interview">
+                             </div>
+                             <div>
+                                 <label for="fiabilite" class="block mb-2 text-sm font-medium burton-text-accent">
+                                     <span class="material-icons text-sm mr-1 align-middle">verified</span>
+                                     Niveau de fiabilité *
+                                 </label>
+                                 <select id="fiabilite" name="fiabilite"
+                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500">
+                                     <option value="">Évaluer la fiabilité</option>
+                                     <option value="confirme">Confirmé (source officielle)</option>
+                                     <option value="probable">Très probable</option>
+                                     <option value="rumeur">Rumeur/Non confirmé</option>
+                                 </select>
+                             </div>
+                         </div>
+                         <div>
+                             <label for="anecdote" class="block mb-2 text-sm font-medium burton-text-accent">
+                                 <span class="material-icons text-sm mr-1 align-middle">description</span>
+                                 Votre anecdote complète *
+                             </label>
+                             <textarea id="anecdote" name="anecdote" rows="6"
+                                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                                 placeholder="Racontez votre anecdote en détail... Plus c'est précis et intéressant, mieux c'est !"></textarea>
+                         </div>
+                         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+                             <button type="submit"
+                                 class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800 inline-flex items-center">
+                                 <span class="material-icons mr-2">send</span>
+                                 Envoyer l'anecdote
+                             </button>
+                             <button type="reset"
+                                 class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-purple-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
+                                 <span class="material-icons mr-2">refresh</span>
+                                 Effacer le formulaire
+                             </button>
+                         </div>
+                     </form>
+                 </div>
         </div>
+         </section>
     </main>
 
-    <footer class="p-6 burton-footer">
+    <footer class="p-6 burton-footer" role="contentinfo">
         <div class="flex justify-between items-center">
             <div>
                 <h3 class="burton-text-accent text-lg">Allyson Lefebvre</h3>
                 <p class="burton-text-primary text-sm flex items-center gap-1 gothic-shadow">
                     © 2025 L'Univers de Burton
-                    <span class="material-icons text-sm burton-text-accent">nightlife</span>
+                    <span class="material-icons text-sm burton-text-accent" aria-hidden="true">nightlife</span>
                 </p>
             </div>
         </div>
     </footer>
+    
+    <script src="js/formulaire.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
+
 </html>
