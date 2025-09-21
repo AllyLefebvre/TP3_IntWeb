@@ -10,9 +10,48 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sass/styles.css">
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="sass/styles.css">
+    <!-- Override Flowbite accordion focus styles -->
+    <style>
+        /* Force les couleurs thématiques sur les accordéons - priorité maximale */
+        button[data-accordion-target="#accordion-secrets-body-1"] {
+            --tw-ring-color: rgba(248, 113, 113, 0.2) !important;
+        }
+        button[data-accordion-target="#accordion-secrets-body-1"]:focus {
+            outline: none !important;
+            border-color: rgb(248, 113, 113) !important;
+            box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.2) !important;
+        }
+        
+        button[data-accordion-target="#accordion-secrets-body-2"] {
+            --tw-ring-color: rgba(134, 239, 172, 0.2) !important;
+        }
+        button[data-accordion-target="#accordion-secrets-body-2"]:focus {
+            outline: none !important;
+            border-color: rgb(74, 222, 128) !important;
+            box-shadow: 0 0 0 4px rgba(134, 239, 172, 0.2) !important;
+        }
+        
+        button[data-accordion-target="#accordion-secrets-body-3"] {
+            --tw-ring-color: rgba(147, 197, 253, 0.2) !important;
+        }
+        button[data-accordion-target="#accordion-secrets-body-3"]:focus {
+            outline: none !important;
+            border-color: rgb(96, 165, 250) !important;
+            box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.2) !important;
+        }
+        
+        button[data-accordion-target="#accordion-secrets-body-4"] {
+            --tw-ring-color: rgba(196, 181, 253, 0.2) !important;
+        }
+        button[data-accordion-target="#accordion-secrets-body-4"]:focus {
+            outline: none !important;
+            border-color: rgb(168, 85, 247) !important;
+            box-shadow: 0 0 0 4px rgba(196, 181, 253, 0.2) !important;
+        }
+    </style>
 </head>
 
 <body class="burton-text-primary min-h-screen flex flex-col burton-body">
@@ -108,89 +147,100 @@
                     Secrets révélés
                 </h2>
                 <div id="accordion-secrets" data-accordion="collapse" data-active-classes="bg-purple-800 burton-text-primary" data-inactive-classes="burton-text-primary">
-                    <h2 id="accordion-secrets-heading-1">
-                        <button type="button" class="bg-red-900 border border-red-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg focus:ring-4 focus:ring-red-200 hover:bg-red-800 gap-3" data-accordion-target="#accordion-secrets-body-1" aria-expanded="false" aria-controls="accordion-secrets-body-1">
-                            <div class="flex items-center">
-                                <span class="material-icons text-red-400 mr-3">visibility_off</span>
-                                <span class="text-xl font-bold text-red-100">Secret #1 : Le daltonisme de Burton</span>
+                    <div>
+                        <h3 id="accordion-secrets-heading-1">
+                            <button type="button" class="bg-red-900 border border-red-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg focus:ring-4 focus:ring-red-200 focus:border-red-400 hover:bg-red-800 gap-3" data-accordion-target="#accordion-secrets-body-1" aria-expanded="false" aria-controls="accordion-secrets-body-1">
+                                <span class="flex items-center">
+                                    <span class="material-icons text-red-400 mr-3" aria-hidden="true">visibility_off</span>
+                                    <span class="text-xl font-bold text-red-100">Secret #1 : Le daltonisme de Burton</span>
+                                </span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-red-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <div id="accordion-secrets-body-1" class="hidden" aria-labelledby="accordion-secrets-heading-1">
+                            <div class="p-6 bg-red-900 border border-red-500 mt-2 rounded-lg">
+                                <p class="text-red-100 text-base leading-relaxed">
+                                    Burton ne voit pas les couleurs comme nous ! Son daltonisme explique
+                                    sa palette si distinctive : noir/blanc, bleus profonds, oranges vifs.
+                                    Cette "limitation" devient sa signature visuelle unique et contribue
+                                    à l'unicité de son univers esthétique.
+                                </p>
                             </div>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-red-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-secrets-body-1" class="hidden" aria-labelledby="accordion-secrets-heading-1">
-                        <div class="p-6 bg-red-900 border border-red-500 mt-2 rounded-lg">
-                            <p class="text-red-100 text-base leading-relaxed">
-                                Burton ne voit pas les couleurs comme nous ! Son daltonisme explique
-                                sa palette si distinctive : noir/blanc, bleus profonds, oranges vifs.
-                                Cette "limitation" devient sa signature visuelle unique et contribue
-                                à l'unicité de son univers esthétique.
-                            </p>
                         </div>
                     </div>
-                    <h2 id="accordion-secrets-heading-2">
-                        <button type="button" class="bg-green-900 border border-green-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg focus:ring-4 focus:ring-green-200 hover:bg-green-800 gap-3 mt-4" data-accordion-target="#accordion-secrets-body-2" aria-expanded="false" aria-controls="accordion-secrets-body-2">
-                            <div class="flex items-center">
-                                <span class="material-icons text-green-400 mr-3">brush</span>
-                                <span class="text-xl font-bold text-green-100">Secret #2 : Dessins artisanaux</span>
+                    
+                    <div>
+                        <h3 id="accordion-secrets-heading-2">
+                            <button type="button" class="bg-green-900 border border-green-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg hover:bg-green-800 gap-3 mt-4" data-accordion-target="#accordion-secrets-body-2" aria-expanded="false" aria-controls="accordion-secrets-body-2">
+                                <span class="flex items-center">
+                                    <span class="material-icons text-green-400 mr-3" aria-hidden="true">brush</span>
+                                    <span class="text-xl font-bold text-green-100">Secret #2 : Dessins artisanaux</span>
+                                </span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <div id="accordion-secrets-body-2" class="hidden" aria-labelledby="accordion-secrets-heading-2">
+                            <div class="p-6 bg-green-900 border border-green-500 mt-2 rounded-lg">
+                                <p class="text-green-100 text-base leading-relaxed">
+                                    Malgré sa célébrité mondiale, Burton continue de dessiner personnellement
+                                    chaque personnage avant le tournage. Ces croquis, réalisés au crayon ou à l'encre,
+                                    servent de bible visuelle pour toute l'équipe et garantissent la cohérence
+                                    parfaite de son univers visuel.
+                                </p>
                             </div>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-secrets-body-2" class="hidden" aria-labelledby="accordion-secrets-heading-2">
-                        <div class="p-6 bg-green-900 border border-green-500 mt-2 rounded-lg">
-                            <p class="text-green-100 text-base leading-relaxed">
-                                Malgré sa célébrité mondiale, Burton continue de dessiner personnellement
-                                chaque personnage avant le tournage. Ces croquis, réalisés au crayon ou à l'encre,
-                                servent de bible visuelle pour toute l'équipe et garantissent la cohérence
-                                parfaite de son univers visuel.
-                            </p>
                         </div>
                     </div>
-                    <h2 id="accordion-secrets-heading-3">
-                        <button type="button" class="bg-blue-900 border border-blue-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800 gap-3 mt-4" data-accordion-target="#accordion-secrets-body-3" aria-expanded="false" aria-controls="accordion-secrets-body-3">
-                            <div class="flex items-center">
-                                <span class="material-icons text-blue-400 mr-3">pets</span>
-                                <span class="text-xl font-bold text-blue-100">Secret #3 : Sa phobie des singes</span>
+                    
+                    <div>
+                        <h3 id="accordion-secrets-heading-3">
+                            <button type="button" class="bg-blue-900 border border-blue-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg hover:bg-blue-800 gap-3 mt-4" data-accordion-target="#accordion-secrets-body-3" aria-expanded="false" aria-controls="accordion-secrets-body-3">
+                                <span class="flex items-center">
+                                    <span class="material-icons text-blue-400 mr-3" aria-hidden="true">pets</span>
+                                    <span class="text-xl font-bold text-blue-100">Secret #3 : Sa phobie des singes</span>
+                                </span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <div id="accordion-secrets-body-3" class="hidden" aria-labelledby="accordion-secrets-heading-3">
+                            <div class="p-6 bg-blue-900 border border-blue-500 mt-2 rounded-lg">
+                                <p class="text-blue-100 text-base leading-relaxed">
+                                    Burton a une véritable phobie des singes ! Cette peur remonte à son enfance
+                                    et explique pourquoi il a eu tant de difficultés à réaliser "Planet of the Apes" (2001).
+                                    Il devait constamment détourner le regard pendant les scènes avec les acteurs
+                                    en costume de singes, ce qui rendait la direction d'acteurs particulièrement complexe.
+                                </p>
                             </div>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-secrets-body-3" class="hidden" aria-labelledby="accordion-secrets-heading-3">
-                        <div class="p-6 bg-blue-900 border border-blue-500 mt-2 rounded-lg">
-                            <p class="text-blue-100 text-base leading-relaxed">
-                                Burton a une véritable phobie des singes ! Cette peur remonte à son enfance
-                                et explique pourquoi il a eu tant de difficultés à réaliser "Planet of the Apes" (2001).
-                                Il devait constamment détourner le regard pendant les scènes avec les acteurs
-                                en costume de singes, ce qui rendait la direction d'acteurs particulièrement complexe.
-                            </p>
                         </div>
                     </div>
-                    <h2 id="accordion-secrets-heading-4">
-                        <button type="button" class="bg-purple-900 border border-purple-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg focus:ring-4 focus:ring-purple-200 hover:bg-purple-800 gap-3 mt-4" data-accordion-target="#accordion-secrets-body-4" aria-expanded="false" aria-controls="accordion-secrets-body-4">
-                            <div class="flex items-center">
-                                <span class="material-icons text-purple-400 mr-3">business</span>
-                                <span class="text-xl font-bold text-purple-100">Secret #4 : Viré de Disney pour "Frankenweenie"</span>
+                    
+                    <div>
+                        <h3 id="accordion-secrets-heading-4">
+                            <button type="button" class="bg-purple-900 border border-purple-500 flex items-center justify-between w-full p-6 font-medium rtl:text-right rounded-lg hover:bg-purple-800 gap-3 mt-4" data-accordion-target="#accordion-secrets-body-4" aria-expanded="false" aria-controls="accordion-secrets-body-4">
+                                <span class="flex items-center">
+                                    <span class="material-icons text-purple-400 mr-3" aria-hidden="true">business</span>
+                                    <span class="text-xl font-bold text-purple-100">Secret #4 : Viré de Disney pour "Frankenweenie"</span>
+                                </span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-purple-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                </svg>
+                            </button>
+                        </h3>
+                        <div id="accordion-secrets-body-4" class="hidden" aria-labelledby="accordion-secrets-heading-4">
+                            <div class="p-6 bg-purple-900 border border-purple-500 mt-2 rounded-lg">
+                                <p class="text-purple-100 text-base leading-relaxed">
+                                    En 1984, Disney a licencié Burton après qu'il ait réalisé "Frankenweenie",
+                                    le jugeant "trop effrayant pour les enfants". Ironiquement, ce même court-métrage
+                                    lui a ouvert les portes d'Hollywood et a lancé sa carrière. Disney a même
+                                    racheté les droits en 2012 pour en faire un long-métrage, reconnaissant
+                                    finalement le génie de Burton !
+                                </p>
                             </div>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 text-purple-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-secrets-body-4" class="hidden" aria-labelledby="accordion-secrets-heading-4">
-                        <div class="p-6 bg-purple-900 border border-purple-500 mt-2 rounded-lg">
-                            <p class="text-purple-100 text-base leading-relaxed">
-                                En 1984, Disney a licencié Burton après qu'il ait réalisé "Frankenweenie",
-                                le jugeant "trop effrayant pour les enfants". Ironiquement, ce même court-métrage
-                                lui a ouvert les portes d'Hollywood et a lancé sa carrière. Disney a même
-                                racheté les droits en 2012 pour en faire un long-métrage, reconnaissant
-                                finalement le génie de Burton !
-                            </p>
                         </div>
                     </div>
                 </div>
