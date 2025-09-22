@@ -7,9 +7,32 @@
     <meta name="description"
         content="Découvrez les anecdotes fascinantes et secrets de tournage de Tim Burton : ses inspirations, son daltonisme, ses techniques artisanales et les coulisses de ses films cultes.">
     <title>Anecdotes et secrets de Tim Burton - L'Univers de Burton</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3B1C32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Burton Universe">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
+    <!-- Anime.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./js/service-worker.js')
+                    .then(registration => {
+                        console.log('🎭 Service Worker Burton enregistré:', registration.scope);
+                        registration.addEventListener('updatefound', () => {
+                            console.log('🔄 Nouvelle version du Service Worker détectée');
+                        });
+                    })
+                    .catch(error => {
+                        console.error('❌ Erreur Service Worker:', error);
+                    });
+            });
+        }
+    </script>
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="sass/styles.css">
@@ -321,7 +344,7 @@
                      Partagez vos anecdotes Burton
                  </h2>
 
-                 <div class="burton-card p-8 rounded-lg burton-border max-w-4xl mx-auto">
+                 <div class="burton-form-container p-8 rounded-lg burton-border max-w-4xl mx-auto">
                      <p class="burton-text-primary text-center mb-8 text-base">
                          Vous connaissez une anecdote ou un fun fact sur Tim Burton ? 
                          Partagez-le avec la communauté des fans !
@@ -457,8 +480,9 @@
             </div>
         </div>
     </footer>
-    
     <script src="js/formulaire.js"></script>
+    <!-- Animations Burton -->
+    <script src="js/burton-animations.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 

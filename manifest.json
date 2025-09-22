@@ -1,0 +1,95 @@
+{
+  "name": "L'Univers de Tim Burton - Site Web Officiel",
+  "short_name": "Burton Universe",
+  "description": "Découvrez l'univers fascinant de Tim Burton : ses films cultes, anecdotes secrètes et inspirations gothiques",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0B0C10",
+  "theme_color": "#3B1C32",
+  "orientation": "any",
+  "scope": "./",
+  "lang": "fr",
+  "categories": ["entertainment", "movies", "art"],
+  "icons": [
+    {
+      "src": "icons/tim_burton_icon_144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/tim_burton_icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/tim_burton_icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/screenshot-mobile.png",
+      "sizes": "370x802",
+      "type": "image/png",
+      "label": "L'Univers de Tim Burton - Interface mobile"
+    },
+    {
+      "src": "screenshots/page_accueil_desktop.png",
+      "sizes": "1890x854",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "L'Univers de Tim Burton - Interface desktop"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Films de Tim Burton",
+      "short_name": "Films",
+      "description": "Découvrez la filmographie complète de Tim Burton",
+      "url": "./movies.html",
+      "icons": [
+        {
+          "src": "icons/tim_burton_icon_192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Anecdotes et Secrets",
+      "short_name": "Anecdotes",
+      "description": "Les secrets et anecdotes fascinantes de Tim Burton",
+      "url": "./fun_facts.html",
+      "icons": [
+        {
+          "src": "icons/tim_burton_icon_192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Accueil",
+      "short_name": "Home",
+      "description": "Retour à la page d'accueil de L'Univers de Burton",
+      "url": "./index.html",
+      "icons": [
+        {
+          "src": "icons/tim_burton_icon_192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+burton",
+      "url": "/index.html?action=%s"
+    }
+  ]
+}

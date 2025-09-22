@@ -29,6 +29,11 @@
     @include burton-shadow;
 }
 
+.burton-form-container {
+    @include burton-gradient;
+    @include burton-shadow;
+}
+
 .section-intro {
     background: linear-gradient(135deg, var(--burton-navy), var(--burton-purple));
 }

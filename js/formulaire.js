@@ -162,8 +162,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         form.parentNode.appendChild(successDiv);
 
+        if (typeof createMacabreConfetti === 'function') {
+            createMacabreConfetti();
+        }
+
         setTimeout(() => {
             window.location.reload();
-        }, 2000);
+        }, 6000);
     }
 });
